@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using HTML Entities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using HTML Entities</h1>
+    <p>HTML entities are used to represent characters that have special meaning in HTML or characters that are not available on the keyboard. Instead of using the actual character, you can use the corresponding entity name or numeric code.</p>
+
+    <!-- Example 1: Basic HTML Entities -->
+    <div class="section">
+        <h2>1. Basic HTML Entities</h2>
+        <p>Here are a few common HTML entities:</p>
+        <ul>
+            <li><strong>&lt;</strong>: Less-than symbol</li>
+            <li><strong>&gt;</strong>: Greater-than symbol</li>
+            <li><strong>&amp;</strong>: Ampersand symbol</li>
+            <li><strong>&quot;</strong>: Double quotation mark</li>
+        </ul>
+
+        <p>Example 1: Displaying special characters using HTML entities.</p>
+        <pre>
+&lt;p&gt;This is an example of &lt; and &gt; symbols using HTML entities.&lt;/p&gt;
+        </pre>
+        <p>Result:</p>
+        <p>This is an example of < and > symbols using HTML entities.</p>
+    </div>
+
+    <!-- Example 2: HTML Entities for Non-Printable Characters -->
+    <div class="section">
+        <h2>2. HTML Entities for Non-Printable Characters</h2>
+        <p>There are many non-printable or special characters that can be used with HTML entities. For example, the copyright symbol or a trademark symbol:</p>
+        <ul>
+            <li><strong>&copy;</strong>: Copyright symbol (©)</li>
+            <li><strong>&reg;</strong>: Registered trademark symbol (®)</li>
+        </ul>
+
+        <p>Example 2: Displaying copyright and registered trademark symbols using HTML entities.</p>
+        <pre>
+&lt;p&gt;The &copy; symbol represents copyright.&lt;/p&gt;
+&lt;p&gt;The &reg; symbol represents a registered trademark.&lt;/p&gt;
+        </pre>
+        <p>Result:</p>
+        <p>The © symbol represents copyright.</p>
+        <p>The ® symbol represents a registered trademark.</p>
+    </div>
+
+    <!-- Example 3: Using Numeric HTML Entities -->
+    <div class="section">
+        <h2>3. Using Numeric HTML Entities</h2>
+        <p>Numeric entities allow you to represent characters using their Unicode values. These can be either decimal or hexadecimal:</p>
+        <ul>
+            <li><strong>&#169;</strong>: Copyright symbol using decimal code</li>
+            <li><strong>&#xAE;</strong>: Registered trademark symbol using hexadecimal code</li>
+        </ul>
+
+        <p>Example 3: Using numeric HTML entities to display characters.</p>
+        <pre>
+&lt;p&gt;The &#169; symbol represents copyright.&lt;/p&gt;
+&lt;p&gt;The &#xAE; symbol represents a registered trademark.&lt;/p&gt;
+        </pre>
+        <p>Result:</p>
+        <p>The &#169; symbol represents copyright.</p>
+        <p>The &#xAE; symbol represents a registered trademark.</p>
+    </div>
+
+    <!-- Example 4: Using HTML Entities for Mathematical Symbols -->
+    <div class="section">
+        <h2>4. HTML Entities for Mathematical Symbols</h2>
+        <p>HTML entities can also be used to display mathematical symbols like plus-minus or multiplication signs:</p>
+        <ul>
+            <li><strong>&plusmn;</strong>: Plus-minus symbol (±)</li>
+            <li><strong>&times;</strong>: Multiplication sign (×)</li>
+        </ul>
+
+        <p>Example 4: Displaying mathematical symbols using HTML entities.</p>
+        <pre>
+&lt;p&gt;The result is &plusmn;5.&lt;/p&gt;
+&lt;p&gt;The value is 6 &times; 7 = 42.&lt;/p&gt;
+        </pre>
+        <p>Result:</p>
+        <p>The result is ±5.</p>
+        <p>The value is 6 × 7 = 42.</p>
+    </div>
+
+</body>
+</html>

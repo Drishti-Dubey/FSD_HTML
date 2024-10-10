@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Video in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using Video in HTML</h1>
+    <p>The <code>&lt;video&gt;</code> element in HTML is used to embed video content on a web page. It allows for various attributes like <code>controls</code> for user interaction, <code>autoplay</code> to start the video automatically, and <code>loop</code> to make the video repeat. Below are some examples of how to use videos in HTML.</p>
+
+    <!-- Example 1: Basic Video with Controls -->
+    <div class="section">
+        <h2>1. Basic Video with Controls</h2>
+        <p>The <code>&lt;video&gt;</code> tag can include the <code>controls</code> attribute, which gives users the ability to play, pause, and adjust the volume of the video.</p>
+
+        <p>Example 1: A video with playback controls.</p>
+        <pre>
+&lt;video controls&gt;
+    &lt;source src="video/sample.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </pre>
+        <p>Result:</p>
+        <video controls>
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <!-- Example 2: Video with Autoplay and Loop -->
+    <div class="section">
+        <h2>2. Video with Autoplay and Loop</h2>
+        <p>The <code>autoplay</code> attribute makes the video play automatically when the page loads. The <code>loop</code> attribute makes the video loop once it reaches the end.</p>
+
+        <p>Example 2: A video that plays automatically and loops continuously.</p>
+        <pre>
+&lt;video autoplay loop&gt;
+    &lt;source src="video/sample.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </pre>
+        <p>Result:</p>
+        <video autoplay loop>
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <!-- Example 3: Multiple Video Formats for Compatibility -->
+    <div class="section">
+        <h2>3. Multiple Video Formats for Compatibility</h2>
+        <p>For better browser compatibility, you can provide multiple formats for the video source, such as MP4, WebM, and Ogg.</p>
+
+        <p>Example 3: Providing multiple video formats for wider compatibility.</p>
+        <pre>
+&lt;video controls&gt;
+    &lt;source src="video/sample.mp4" type="video/mp4"&gt;
+    &lt;source src="video/sample.webm" type="video/webm"&gt;
+    &lt;source src="video/sample.ogv" type="video/ogg"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </pre>
+        <p>Result:</p>
+        <video controls>
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/movie.webm" type="video/webm">
+            <source src="https://www.w3schools.com/html/movie.ogv" type="video/ogg">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <!-- Example 4: Custom Video Controls Using JavaScript -->
+    <div class="section">
+        <h2>4. Custom Video Controls Using JavaScript</h2>
+        <p>With JavaScript, you can customize video controls, such as creating your own play/pause buttons, adjusting volume, and more.</p>
+
+        <p>Example 4: Custom play/pause button for video.</p>
+        <pre>
+&lt;video id="myVideo"&gt;
+    &lt;source src="video/sample.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;button onclick="togglePlayPause()"&gt;Play/Pause&lt;/button&gt;
+
+&lt;script&gt;
+function togglePlayPause() {
+    var video = document.getElementById("myVideo");
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
+&lt;/script&gt;
+        </pre>
+        <p>Result:</p>
+        <video id="myVideo">
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+        <button onclick="togglePlayPause()">Play/Pause</button>
+
+        <script>
+            function togglePlayPause() {
+                var video = document.getElementById("myVideo");
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+        </script>
+    </div>
+
+</body>
+</html>

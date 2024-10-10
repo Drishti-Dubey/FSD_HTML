@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating and Using Tables in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Creating and Using Tables in HTML</h1>
+    <p>Tables in HTML are used to display tabular data in rows and columns. Below, we'll explore how to create tables and use them effectively in HTML, with two examples for each.</p>
+
+    <!-- Table Structure -->
+    <div class="section">
+        <h2>1. Basic Table Structure</h2>
+        <p>A basic table in HTML is created using the following tags:</p>
+        <ul>
+            <li><code>&lt;table&gt;</code> - Defines the table element.</li>
+            <li><code>&lt;tr&gt;</code> - Defines a row in the table.</li>
+            <li><code>&lt;th&gt;</code> - Defines a header cell in the table (bold and centered by default).</li>
+            <li><code>&lt;td&gt;</code> - Defines a regular data cell in the table.</li>
+        </ul>
+        <p>Example 1: A simple table with headers and data.</p>
+        <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+        &lt;th&gt;City&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;New York&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alice&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+        &lt;td&gt;Los Angeles&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+        <p>Result: A simple table with 2 rows of data.</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+                <td>Los Angeles</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Table with Columnspan and Rowspan -->
+    <div class="section">
+        <h2>2. Table with Columnspan and Rowspan</h2>
+        <p>The <code>colspan</code> attribute is used to merge cells horizontally (across columns), while <code>rowspan</code> merges cells vertically (across rows).</p>
+        <p>Example 2: A table that spans columns and rows.</p>
+        <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th colspan="2"&gt;Personal Information&lt;/th&gt;
+        &lt;th rowspan="2"&gt;Location&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Name&lt;/td&gt;
+        &lt;td&gt;John Doe&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Age&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+        &lt;td&gt;New York&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+        <p>Result: A table where the header spans two columns and the location cell spans two rows.</p>
+        <table>
+            <tr>
+                <th colspan="2">Personal Information</th>
+                <th rowspan="2">Location</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>John Doe</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Table with Caption -->
+    <div class="section">
+        <h2>3. Table with Caption</h2>
+        <p>The <code>&lt;caption&gt;</code> tag is used to provide a title for the table. It is typically displayed above the table.</p>
+        <p>Example 3: A table with a caption.</p>
+        <pre>
+&lt;table&gt;
+    &lt;caption&gt;Student Information&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Grade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Jane&lt;/td&gt;
+        &lt;td&gt;B&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+        <p>Result: A table with a caption and data rows.</p>
+        <table>
+            <caption>Student Information</caption>
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>B</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Table with Styles -->
+    <div class="section">
+        <h2>4. Table with Styles</h2>
+        <p>Using CSS, we can style tables to make them look more presentable.</p>
+        <p>Example 4: A styled table with borders, padding, and background color.</p>
+        <pre>
+&lt;style&gt;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+    th {
+        background-color: #f4f4f4;
+    }
+&lt;/style&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Product&lt;/th&gt;
+        &lt;th&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Laptop&lt;/td&gt;
+        &lt;td&gt;$999&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Phone&lt;/td&gt;
+        &lt;td&gt;$599&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+        <p>Result: A styled table with padding, borders, and background color.</p>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Laptop</td>
+                <td>$999</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>$599</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Frames in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Introduction to Frames in HTML</h1>
+    <p>Frames in HTML are used to divide the web page into different sections, each of which can display a different HTML document. However, <strong>frames</strong> are an outdated feature in HTML5. They have been replaced by other layout techniques like <strong>CSS Grid</strong> and <strong>Flexbox</strong>.</p>
+
+    <!-- Example 1: Using <frameset> (Deprecated) -->
+    <div class="section">
+        <h2>1. Using <code>&lt;frameset&gt;</code> (Deprecated)</h2>
+        <p>The <code>&lt;frameset&gt;</code> tag is used to create a page with multiple frames. The <code>&lt;frameset&gt;</code> tag replaces the <code>&lt;body&gt;</code> tag in a frameset layout.</p>
+
+        <p>Example 1: Creating a webpage with two frames, one for navigation and one for content.</p>
+        <pre>
+&lt;html&gt;
+  &lt;frameset cols="200px,*"&gt;
+    &lt;frame src="menu.html"&gt;
+    &lt;frame src="content.html"&gt;
+  &lt;/frameset&gt;
+&lt;/html&gt;
+        </pre>
+        <p>Result: The page will display two sections:</p>
+        <ul>
+            <li>The left section will load <code>menu.html</code> (200px width).</li>
+            <li>The right section will load <code>content.html</code> and take up the remaining space.</li>
+        </ul>
+
+        <p><strong>Note:</strong> The <code>&lt;frameset&gt;</code> tag is deprecated in HTML5. It is recommended to use modern layout techniques like CSS Grid or Flexbox instead of frames.</p>
+    </div>
+
+    <!-- Example 2: Using <iframe> (Recommended) -->
+    <div class="section">
+        <h2>2. Using <code>&lt;iframe&gt;</code> (Recommended)</h2>
+        <p>The <code>&lt;iframe&gt;</code> tag is the modern way to embed another HTML document inside the current page. It is more flexible and widely supported compared to <code>&lt;frameset&gt;</code>.</p>
+
+        <p>Example 2: Embedding a YouTube video using an <code>&lt;iframe&gt;</code> tag.</p>
+        <pre>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+        </pre>
+        <p>Result: This will display an embedded YouTube video on the page.</p>
+
+        <p>Example 3: Embedding a webpage inside your page using <code>&lt;iframe&gt;</code>.</p>
+        <pre>
+&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;
+        </pre>
+        <p>Result: This will embed the website "example.com" inside the iframe with specified width and height.</p>
+    </div>
+
+</body>
+</html>
+

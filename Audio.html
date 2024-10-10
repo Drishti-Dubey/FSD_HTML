@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Audio in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using Audio in HTML</h1>
+    <p>HTML provides the <code>&lt;audio&gt;</code> element to embed audio files. You can add various attributes such as <code>controls</code> for user interaction, <code>autoplay</code> for automatic play, and <code>loop</code> for looping the audio.</p>
+
+    <!-- Example 1: Basic Audio Playback -->
+    <div class="section">
+        <h2>1. Basic Audio Playback with Controls</h2>
+        <p>The <code>&lt;audio&gt;</code> element can be used with the <code>controls</code> attribute to allow the user to control the playback (play, pause, volume, etc.).</p>
+
+        <p>Example 1: Adding an audio file with playback controls.</p>
+        <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio/sample.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+        </pre>
+        <p>Result:</p>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Example 2: Audio with Autoplay and Loop -->
+    <div class="section">
+        <h2>2. Audio with Autoplay and Loop</h2>
+        <p>The <code>autoplay</code> attribute allows the audio to start automatically when the page loads, and the <code>loop</code> attribute allows the audio to play repeatedly.</p>
+
+        <p>Example 2: An audio that plays automatically and loops continuously.</p>
+        <pre>
+&lt;audio autoplay loop&gt;
+    &lt;source src="audio/sample.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+        </pre>
+        <p>Result:</p>
+        <audio autoplay loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Example 3: Multiple Audio Formats for Compatibility -->
+    <div class="section">
+        <h2>3. Multiple Audio Formats for Compatibility</h2>
+        <p>For better compatibility across browsers, you can provide multiple audio sources with different formats. This ensures that the audio plays regardless of the user's browser support for certain formats.</p>
+
+        <p>Example 3: Providing both MP3 and Ogg formats for wider browser support.</p>
+        <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio/sample.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio/sample.ogg" type="audio/ogg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+        </pre>
+        <p>Result:</p>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Example 4: Customizing Audio Controls Using JavaScript -->
+    <div class="section">
+        <h2>4. Customizing Audio Controls Using JavaScript</h2>
+        <p>JavaScript can be used to control the audio, such as playing, pausing, changing volume, and more.</p>
+
+        <p>Example 4: Using JavaScript to play or pause audio.</p>
+        <pre>
+&lt;audio id="myAudio"&gt;
+    &lt;source src="audio/sample.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;button onclick="toggleAudio()"&gt;Play/Pause Audio&lt;/button&gt;
+
+&lt;script&gt;
+function toggleAudio() {
+    var audio = document.getElementById('myAudio');
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+&lt;/script&gt;
+        </pre>
+        <p>Result:</p>
+        <audio id="myAudio">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button onclick="toggleAudio()">Play/Pause Audio</button>
+
+        <script>
+            function toggleAudio() {
+                var audio = document.getElementById('myAudio');
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            }
+        </script>
+    </div>
+
+</body>
+</html>

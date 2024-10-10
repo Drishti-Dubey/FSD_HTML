@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Images in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using Images in HTML</h1>
+    <p>In HTML, images are added using the <code>&lt;img&gt;</code> tag. The <code>&lt;img&gt;</code> tag is a self-closing tag, meaning it doesn't require a closing tag. To specify the image source, the <code>src</code> attribute is used. You can also specify the image's width, height, and alt text for accessibility.</p>
+
+    <!-- Example 1: Embedding an Image from a URL -->
+    <div class="section">
+        <h2>1. Embedding an Image from a URL</h2>
+        <p>Images can be added from external sources using the <code>src</code> attribute with a URL pointing to the image file.</p>
+
+        <p>Example 1: Embedding an image from an external URL (using a URL to an image on the web).</p>
+        <pre>
+&lt;img src="https://via.placeholder.com/600x300" alt="Placeholder Image"&gt;
+        </pre>
+        <p>Result:</p>
+        <img src="https://via.placeholder.com/600x300" alt="Placeholder Image">
+
+    </div>
+
+    <!-- Example 2: Embedding an Image from Local Directory -->
+    <div class="section">
+        <h2>2. Embedding an Image from a Local Directory</h2>
+        <p>Images can also be linked from your local project folder or server. In this case, the <code>src</code> attribute contains a relative path to the image file.</p>
+
+        <p>Example 2: Embedding an image from a local directory (assuming the image is in the same directory as the HTML file).</p>
+        <pre>
+&lt;img src="local-image.jpg" alt="Local Image"&gt;
+        </pre>
+        <p>Result:</p>
+        <!-- For the local image to show, you would need to replace "local-image.jpg" with a valid local file path -->
+        <img src="local-image.jpg" alt="Local Image">
+
+    </div>
+
+    <!-- Example 3: Resizing Images -->
+    <div class="section">
+        <h2>3. Resizing Images</h2>
+        <p>You can control the size of an image using the <code>width</code> and <code>height</code> attributes, or by using CSS styles. This helps ensure that images fit within the layout of your page.</p>
+
+        <p>Example 3: Resize an image using the <code>width</code> and <code>height</code> attributes.</p>
+        <pre>
+&lt;img src="https://via.placeholder.com/600x300" alt="Placeholder Image" width="300" height="150"&gt;
+        </pre>
+        <p>Result:</p>
+        <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" width="300" height="150">
+
+        <p>Example 4: Resize an image using CSS for better responsiveness.</p>
+        <pre>
+&lt;img src="https://via.placeholder.com/600x300" alt="Placeholder Image" style="width: 50%; height: auto;"&gt;
+        </pre>
+        <p>Result:</p>
+        <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" style="width: 50%; height: auto;">
+    </div>
+
+    <!-- Example 4: Using Image Alt Text for Accessibility -->
+    <div class="section">
+        <h2>4. Using Image Alt Text for Accessibility</h2>
+        <p>It’s important to provide alternative text (alt text) for images. The <code>alt</code> attribute describes the content of the image and is used by screen readers for visually impaired users, as well as displayed if the image fails to load.</p>
+
+        <p>Example 5: Using <code>alt</code> text to describe an image.</p>
+        <pre>
+&lt;img src="https://via.placeholder.com/600x300" alt="A beautiful sunset over the ocean"&gt;
+        </pre>
+        <p>Result:</p>
+        <img src="https://via.placeholder.com/600x300" alt="A beautiful sunset over the ocean">
+    </div>
+
+</body>
+</html>
